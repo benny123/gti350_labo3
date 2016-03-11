@@ -2,6 +2,7 @@ package gti310.tp3;
 
 import gti310.tp3.parser.Chemin;
 import gti310.tp3.parser.FichierParser;
+import gti310.tp3.solver.CheminSolver;
 
 /**
  * The Application class defines a template method to call the elements to
@@ -26,6 +27,9 @@ public class Application {
 		//instancier le parser
 		FichierParser myParser = new FichierParser();
 		Chemin chemin = (Chemin) myParser.parse(args[0]);
+		//résoudre le probleme
+		CheminSolver cheminsolver = new CheminSolver();
+		cheminsolver.solve(chemin);
 		
 		//TEST
 		System.out.println("nb de sommet : "+chemin.getNbDeSommet());

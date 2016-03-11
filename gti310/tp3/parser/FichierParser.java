@@ -60,6 +60,7 @@ public class FichierParser implements Parser<Object>{
 		}catch (IOException ioe){
 			// erreur de fermeture des flux
 			System.out.println("Fichier pas valide" );
+			System.exit(0);
 		}
 		
 		return chemin;
